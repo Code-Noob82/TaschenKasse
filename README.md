@@ -33,18 +33,28 @@ Sie ersetzt komplizierte Kassensysteme durch eine einfache, intuitive Tablet-App
 | **DI** | Koin | Leichtgewichtig & KMP-kompatibel |
 | **Buildsystem** | Gradle KMP | Android & iOS in einem Projekt |
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 
-## 📁 Projektstruktur
-```text
-TaschenKasse/
- ├─ shared/
- │   ├─ src/commonMain/
- │   │   ├─ model/
- │   │   ├─ repository/
- │   │   ├─ datastore/
- │   │   └─ viewmodel/
- │   ├─ src/androidMain/
- │   └─ src/iosMain/
- ├─ androidApp/
- └─ iosApp/
+## 📱 Beispiel-Workflow
+
+1. App starten  
+2. Artikel mit Langdruck konfigurieren (z. B. „Bier – 3,50 €“)  
+3. Per Fingertipp verkaufen  
+4. Menge mit Zahlen 1–9 multiplizieren  
+5. Nach Zahlung → „Neuer Kunde“ drücken
+
+
