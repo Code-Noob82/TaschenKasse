@@ -42,6 +42,7 @@ koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koinComp
 # Multiplatform Settings (Lokale Speicherung)
 multiplatform-settings-noarg = { module = "com.russhwolf:multiplatform-settings-no-arg", version.ref = "multiplatformSettings" }
 multiplatform-settings-datastore = { module = "com.russhwolf:multiplatform-settings-datastore", version.ref = "multiplatformSettings" }
+multiplatform-settings-serialization = { module = "com.russhwolf:multiplatform-settings-serialization", version.ref = "multiplatformSettings" }
 
 # Kotlinx (Serialisierung & Coroutinen)
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }

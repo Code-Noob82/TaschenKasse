@@ -56,6 +56,8 @@ kotlin {
             // Multiplatform-Settings (für DataStore/UserDefaults)
             api(libs.multiplatform.settings.noarg) // "no-arg" wird für serialisierbare Klassen benötigt
 
+            api(libs.multiplatform.settings.serialization)
+
             // Kotlinx Serialization (für JSON)
             api(libs.kotlinx.serialization.json)
 
