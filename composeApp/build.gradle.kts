@@ -1,4 +1,3 @@
-import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -6,6 +5,9 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+
+    // HINZUGEFÜGT: Für die Speicherung von Artikeln (JSON-Serialisierung)
+    alias(libs.plugins.kotlinSerialization)
 }
 
 kotlin {
@@ -29,6 +31,11 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+
+            // HINZUGEFÜGT: Koin für Android (braucht Context)
+            implementation(libs.koin.android)
+            // HINZUGEFÜGT: DataStore-Implementierung für Multiplatform-Settings
+            implementation(libs.multiplatform.settings.datastore)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -39,6 +46,21 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
+
+            // --- HINZUGEFÜGTE ABHÄNGIGKEITEN FÜR TASCHENKASSE ---
+
+            // Koin (Dependency Injection)
+            api(libs.koin.core)
+            api(libs.koin.compose) // Für @koinInject()
+
+            // Multiplatform-Settings (für DataStore/UserDefaults)
+            api(libs.multiplatform.settings.noarg) // "no-arg" wird für serialisierbare Klassen benötigt
+
+            // Kotlinx Serialization (für JSON)
+            api(libs.kotlinx.serialization.json)
+
+            // Coroutines (oft schon transitiv dabei, aber explizit ist sicher)
+            api(libs.kotlinx.coroutines.core)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -47,6 +69,7 @@ kotlin {
 }
 
 android {
+    // Dieser Block ist jetzt ein "application"-Block
     namespace = "de.bytehandwerk.taschenkasse"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
@@ -55,7 +78,7 @@ android {
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.0.0"
     }
     packaging {
         resources {
