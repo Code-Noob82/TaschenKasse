@@ -1,6 +1,12 @@
 # 🎡 TaschenKasse  
 **Einfache Offline-Kassen-App für Feste, Märkte & Verkaufsstände**
 
+[![Build Status](https://img.shields.io/github/actions/workflow/status/Code-Noob82/TaschenKasse/build.yml?branch=main&label=Build)](https://github.com/Code-Noob82/TaschenKasse/actions)
+[![Kotlin](https://img.shields.io/badge/Kotlin-1.9%2B-blue?logo=kotlin&logoColor=white)](https://kotlinlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Downloads](https://img.shields.io/github/downloads/Code-Noob82/TaschenKasse/total.svg)](https://github.com/Code-Noob82/TaschenKasse/releases)
+[![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-lightgrey)](#)
+
 ---
 
 ## 🧭 Überblick
@@ -33,20 +39,6 @@ Sie ersetzt komplizierte Kassensysteme durch eine einfache, intuitive Tablet-App
 | **DI** | Koin | Leichtgewichtig & KMP-kompatibel |
 | **Buildsystem** | Gradle KMP | Android & iOS in einem Projekt |
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---
 
 ## 📱 Beispiel-Workflow
@@ -57,4 +49,45 @@ Sie ersetzt komplizierte Kassensysteme durch eine einfache, intuitive Tablet-App
 4. Menge mit Zahlen 1–9 multiplizieren  
 5. Nach Zahlung → „Neuer Kunde“ drücken
 
+---
 
+## 🖼️ Screenshots
+
+
+
+---
+
+## 💡 Warum Kotlin Multiplatform?
+
+- Gemeinsame Business-Logik für Android & iOS
+- Einheitliches Verhalten, weniger Wartung
+- Moderne Compose UI für beide Plattformen
+- Schnellere Entwicklung zukünftiger Features
+
+---
+
+## 🧠 Roadmap
+
+v0.1.0  → MVP mit Artikeltasten & Warenkorb          ✅ in Entwicklung  
+v0.2.0  → CSV-Export & Umsatzübersicht               🕐 geplant  
+v0.3.0  → Bondrucker-Integration (optional)          🔜 in Vorbereitung  
+v1.0.0  → Veröffentlichung im Play Store & App Store 🚀 geplanter Release
+
+---
+
+## 🧑‍💻 Entwickler
+
+Dominik Baki
+App-Entwickler aus Mannheim, Deutschland
+👉 byteundhandwerk.de
+
+---
+
+## 📄 Lizenz
+
+Dieses Projekt steht unter der MIT License.
+
+---
+
+🪙 TaschenKasse – Kassieren leicht gemacht.
+Für alle, die auf dem Fest lieber ausschenken als rechnen wollen 🍻
