@@ -53,9 +53,9 @@ Sie ersetzt komplizierte Kassensysteme durch eine einfache, intuitive Tablet-App
 
 ## 🧠 Roadmap
 
-v0.1.0  →  MVP mit Artikeltasten & Warenkorb          ✅ in Entwicklung  
-v0.2.0  →  CSV-Export & Umsatzübersicht               🕐 geplant  
-v0.3.0  →  Bondrucker-Integration (optional)          🔜 in Vorbereitung  
+v1.0.0  →  MVP mit Artikeltasten & Warenkorb          ✅ in Entwicklung  
+v1.2.0  →  CSV-Export & Umsatzübersicht               🕐 geplant  
+v1.3.0  →  Bondrucker-Integration (optional)          🔜 in Vorbereitung  
 v1.0.0  →  Veröffentlichung im Play Store & App Store 🚀 geplanter Release
 
 ---
