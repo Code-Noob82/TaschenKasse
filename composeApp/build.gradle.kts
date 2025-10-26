@@ -36,6 +36,7 @@ kotlin {
             implementation(libs.koin.android)
             // HINZUGEFÜGT: DataStore-Implementierung für Multiplatform-Settings
             implementation(libs.multiplatform.settings.datastore)
+            implementation(libs.androidx.datastore.preferences)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -54,7 +55,7 @@ kotlin {
             api(libs.koin.compose) // Für @koinInject()
 
             // Multiplatform-Settings (für DataStore/UserDefaults)
-            api(libs.multiplatform.settings.noarg) // "no-arg" wird für serialisierbare Klassen benötigt
+            api(libs.multiplatform.settings.core)
 
             api(libs.multiplatform.settings.serialization)
 
