@@ -68,6 +68,21 @@ class CashRegisterViewModel(
     }
 
     /**
+     * Ein Artikel im Warenkorb wurde geklickt, um ihn zu entfernen.
+     */
+    fun onRemoveArticleClicked(article: Article) {
+        _cartState.update { current ->
+            val newItems = current.items.toMutableList()
+            newItems.remove(article)
+            current.copy(
+                items = newItems,
+                totalInCents = newItems.sumOf { it.priceInCents }
+            )
+        }
+    }
+
+
+    /**
      * Eine Mengen-Vorwahl-Taste (1-9) wurde geklickt.
      */
     fun onQuantitySelected(quantity: Int) {
